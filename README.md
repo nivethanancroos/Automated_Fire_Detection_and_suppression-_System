@@ -3,6 +3,8 @@ An innovative fire detection and suppression system combining multi-sensor fusio
 
 ## **Circuit Diagram**
 Include an image of the circuit design here. 
+
+
 ![Alt text](design.png)
 
 
