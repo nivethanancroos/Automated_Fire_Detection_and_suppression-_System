@@ -29,13 +29,13 @@ Include an image of the circuit design here.
 
 
 
-## **Features
+## Features
 1. Multi-Sensor Fusion: Reduces false positives by cross-verifying data from multiple sensors.
 2. Real-Time Monitoring: Sends notifications to mobile apps or dashboards.
 3. Automated Suppression: Activates sprinklers or pumps immediately upon fire detection.
 4. Customizable Thresholds: Tailored for residential, commercial, or industrial environments.
 5. Energy-Efficient Design: Low-power standby mode.
-6. Error Handling:** Alerts users if sensors malfunction or disconnect.
+6. Error Handling: Alerts users if sensors malfunction or disconnect.
 
 
 
