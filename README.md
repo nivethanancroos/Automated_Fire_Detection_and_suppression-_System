@@ -11,10 +11,7 @@ Include an image of the circuit design here.
 
 
 ## Problem Statement
-### Fire Hazards in Various Spaces
-- Fires can result from electrical faults, gas leaks, human negligence, or natural disasters.
-- Early detection is critical to prevent extensive damage to life and property.
-
+Current fire detection systems often struggle with false alarms, slow response times, and a lack of real-time alerts. A smarter system is needed to ensure quick detection, reduce false alarms, and provide instant notifications.
 
 
 ## Technologies Used
