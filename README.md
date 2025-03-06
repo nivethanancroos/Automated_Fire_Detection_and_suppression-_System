@@ -13,7 +13,7 @@ Include an image of the circuit design here.
 ## Problem Statement
 Current fire detection systems often struggle with false alarms, slow response times, and a lack of real-time alerts. A smarter system is needed to ensure quick detection, reduce false alarms, and provide instant notifications.
 
-##Objective
+## Objective
 
 To develop an IoT-based fire detection and suppression system that ensures early detection, real-time alerts, and automatic fire control to minimize risks and damage.
 
@@ -53,15 +53,15 @@ To develop an IoT-based fire detection and suppression system that ensures early
 4. Testing:
    - Simulate fire conditions to verify system responses.
 
-##Conclusion
+## Conclusion
 
 The Automated Fire Detection and Suppression System offers a reliable and cost-effective solution for early fire detection, real-time alerts, and automatic suppression, making it suitable for homes, offices, and industries.
 
 Group Members
-2020/E/001 NIVETHANAN CROOS A.R. 
-2020/E/023 BANDARANAYAKE K.M.R.D. 
-2020/E/048 GUNARATHNA B.H.S.S.D. 
-2020/E/068 KARENTHIRAN K. 
+-2020/E/001 NIVETHANAN CROOS A.R. 
+-2020/E/023 BANDARANAYAKE K.M.R.D. 
+-2020/E/048 GUNARATHNA B.H.S.S.D. 
+-2020/E/068 KARENTHIRAN K. 
 
 
 
