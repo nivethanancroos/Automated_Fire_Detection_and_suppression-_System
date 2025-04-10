@@ -1,3 +1,11 @@
 {
-    "idf.pythonInstallPath": "D:\\Espressif\\tools\\idf-python\\3.11.2\\python.exe"
+    "C_Cpp.intelliSenseEngine": "default",
+    "idf.espIdfPathWin": "C:\\Users\\RAVINDU\\esp\\v5.4\\esp-idf",
+    "idf.toolsPathWin": "c:\\Users\\RAVINDU",
+    "idf.pythonInstallPath": "c:\\Users\\RAVINDU\\tools\\idf-python\\3.11.2\\python.exe",
+    "files.associations": {
+        "esp_log.h": "c"
+    },
+    "idf.portWin": "COM3",
+    "idf.flashType": "UART"
 }

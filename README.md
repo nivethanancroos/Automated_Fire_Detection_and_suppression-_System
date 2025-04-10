@@ -1,96 +1,69 @@
-# Automated_Fire_Detection_and_suppression-_System
-An innovative fire detection and suppression system combining multi-sensor fusion and IoT integration for accurate detection, real-time alerts, and automated suppression. Designed for residential, commercial, and industrial safety, it offers cost-effectiveness, scalability, and energy efficiency.
+| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-C61 | ESP32-H2 | ESP32-P4 | ESP32-S2 | ESP32-S3 |
+| ----------------- | ----- | -------- | -------- | -------- | -------- | --------- | -------- | -------- | -------- | -------- |
 
-## Circuit Diagram
-Include an image of the circuit design here. 
+# Blink Example
 
+(See the README.md file in the upper level 'examples' directory for more information about examples.)
 
-![Alt text](design.png)
+This example demonstrates how to blink a LED by using the GPIO driver or using the [led_strip](https://components.espressif.com/component/espressif/led_strip) library if the LED is addressable e.g. [WS2812](https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf). The `led_strip` library is installed via [component manager](main/idf_component.yml).
 
+## How to Use Example
 
+Before project configuration and build, be sure to set the correct chip target using `idf.py set-target <chip_name>`.
 
+### Hardware Required
 
-## Problem Statement
-Current fire detection systems often struggle with false alarms, slow response times, and a lack of real-time alerts. A smarter system is needed to ensure quick detection, reduce false alarms, and provide instant notifications.
+* A development board with normal LED or addressable LED on-board (e.g., ESP32-S3-DevKitC, ESP32-C6-DevKitC etc.)
+* A USB cable for Power supply and programming
 
-## Objective
+See [Development Boards](https://www.espressif.com/en/products/devkits) for more information about it.
 
-To develop an IoT-based fire detection and suppression system that ensures early detection, real-time alerts, and automatic fire control to minimize risks and damage.
+### Configure the Project
 
-## Technologies Used
-- Microcontroller: ESP32 (Dual-core processing, built-in Wi-Fi and Bluetooth).
-- Sensors:
-  - DHT22: Temperature and humidity.
-  - MQ-2: Smoke and combustible gas detection.
-  - Flame Sensor: Infrared-based flame detection.
-- IoT Protocols: MQTT or Firebase for real-time communication.
-- Relay Module: Controls suppression systems (e.g., water pump).
-- Power Supply: 5V DC adapter with voltage regulators.
+Open the project configuration menu (`idf.py menuconfig`).
 
+In the `Example Configuration` menu:
 
+* Select the LED type in the `Blink LED type` option.
+  * Use `GPIO` for regular LED
+  * Use `LED strip` for addressable LED
+* If the LED type is `LED strip`, select the backend peripheral
+  * `RMT` is only available for ESP targets with RMT peripheral supported
+  * `SPI` is available for all ESP targets
+* Set the GPIO number used for the signal in the `Blink GPIO number` option.
+* Set the blinking period in the `Blink period in ms` option.
 
-## Features
-1. Multi-Sensor Fusion: Reduces false positives by cross-verifying data from multiple sensors.
-2. Real-Time Monitoring: Sends notifications to mobile apps or dashboards.
-3. Automated Suppression: Activates sprinklers or pumps immediately upon fire detection.
-4. Customizable Thresholds: Tailored for residential, commercial, or industrial environments.
-5. Energy-Efficient Design: Low-power standby mode.
-6. Error Handling: Alerts users if sensors malfunction or disconnect.
+### Build and Flash
 
+Run `idf.py -p PORT flash monitor` to build, flash and monitor the project.
 
+(To exit the serial monitor, type ``Ctrl-]``.)
 
-## Installation and Setup
-1. Hardware Setup:
-   - Connect components as per the circuit diagram.
-   - Ensure power supply is stable.
-2. Software Setup:
-   - Install the Arduino IDE.
-   - Add ESP32 libraries and configure the code.
-   - Upload the code to ESP32.
-3. IoT Configuration:
-   - Set up an MQTT broker or Firebase for notifications.
-   - Configure Wi-Fi credentials in the code.
-4. Testing:
-   - Simulate fire conditions to verify system responses.
-  
+See the [Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html) for full steps to configure and use ESP-IDF to build projects.
 
-## Working Principle
+## Example Output
 
--Fire Detection: Sensors (temperature, smoke, and flame) continuously monitor the surroundings.
+As you run the example, you will see the LED blinking, according to the previously defined period. For the addressable LED, you can also change the LED color by setting the `led_strip_set_pixel(led_strip, 0, 16, 16, 16);` (LED Strip, Pixel Number, Red, Green, Blue) with values from 0 to 255 in the [source file](main/blink_example_main.c).
 
--Fire Confirmation: Multiple sensor readings are checked to minimize false alarms.
+```text
+I (315) example: Example configured to blink addressable LED!
+I (325) example: Turning the LED OFF!
+I (1325) example: Turning the LED ON!
+I (2325) example: Turning the LED OFF!
+I (3325) example: Turning the LED ON!
+I (4325) example: Turning the LED OFF!
+I (5325) example: Turning the LED ON!
+I (6325) example: Turning the LED OFF!
+I (7325) example: Turning the LED ON!
+I (8325) example: Turning the LED OFF!
+```
 
--Alert & Notification: A buzzer sounds locally, and an IoT-based alert is sent to a mobile app.
+Note: The color order could be different according to the LED model.
 
--Automatic Suppression: The relay activates a water pump or sprinkler to extinguish the fire.
+The pixel number indicates the pixel position in the LED strip. For a single LED, use 0.
 
--Remote Monitoring: Users can check and control the system via a mobile app.
+## Troubleshooting
 
--Energy Saving: The system operates in low-power mode, activating only when needed.
+* If the LED isn't blinking, check the GPIO or the LED type selection in the `Example Configuration` menu.
 
-
-
-## Conclusion
-
-The Automated Fire Detection and Suppression System offers a reliable and cost-effective solution for early fire detection, real-time alerts, and automatic suppression, making it suitable for homes, offices, and industries.
-
-
-## Group Members
-2020/E/001 NIVETHANAN CROOS A.R. 
-
-2020/E/023 BANDARANAYAKE K.M.R.D. 
-
-2020/E/048 GUNARATHNA B.H.S.S.D. 
-
-2020/E/068 KARENTHIRAN K. 
-
-
-
-
-
-
-
-
-
-
-
+For any technical queries, please open an [issue](https://github.com/espressif/esp-idf/issues) on GitHub. We will get back to you soon.
