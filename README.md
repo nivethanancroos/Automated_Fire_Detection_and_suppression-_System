@@ -22,10 +22,15 @@ Objective: To develop an IoT-based fire detection and suppression system that en
 
 ### Working Principle
 Fire Detection – Sensors (temperature, smoke, and flame) continuously monitor the surroundings.
+
 Fire Confirmation – The system checks multiple sensor readings to reduce false alarms.
+
 Alert & Notification – A buzzer sounds locally, and an IoT-based alert is sent to a mobile app.
+
 Automatic Suppression – A relay activates a water pump or sprinkler to put out the fire.
+
 Remote Monitoring – Users can check and control the system through a mobile app.
+
 Energy Saving – The system stays in low-power mode and activates only when needed.
 
 
@@ -51,10 +56,12 @@ Hotels & Shopping Malls
 Offices & Commercial Buildings
 
 ## Conclusion & Future Scope
-#Conclusion
+Conclusion
+
 The Automated Fire Detection and Suppression System ensures early fire detection, real-time alerts, and automatic suppression, reducing fire risks effectively. It is a cost-effective, scalable, and reliable solution for homes, offices, and industries.
 
-#Future Scope
+Future Scope
+
 AI-based fire prediction for smarter detection.
 Cloud storage for data analysis.
 Wireless sensor networks for wider coverage.
